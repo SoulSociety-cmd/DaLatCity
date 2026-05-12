@@ -1,196 +1,592 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claude (Warm Editorial UI)</title>
+  <meta name="description" content="Dong Nai Province — tourism, cuisine, economy & industry — modern animated landing page." />
+  <title>Đồng Nai — Vietnam</title>
+
   <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Preconnect for performance (optional) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 </head>
 <body>
+  <!-- Loading overlay -->
+  <div id="loading" aria-live="polite" aria-busy="true">
+    <div class="loading__card">
+      <div class="loading__ring" aria-hidden="true"></div>
+      <div class="loading__title">Đang tải Đồng Nai...</div>
+      <div class="loading__hint">Chuẩn bị trải nghiệm mới</div>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Bỏ qua đến nội dung</a>
+
   <header class="top-nav" role="banner">
     <div class="container top-nav__inner">
-      <a class="brand" href="#" aria-label="Anthropic Claude">
-        <span class="spike-mark" aria-hidden="true">✶</span>
-        <span class="brand__word">Claude</span>
-      </a>
+      <div class="brand" aria-label="Dong Nai Province">
+        <span class="brand__mark" aria-hidden="true">⛰</span>
+        <span class="brand__word">Đồng Nai</span>
+      </div>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="#">Product</a>
-        <a class="nav__link" href="#">Solutions</a>
-        <a class="nav__link" href="#">Use Cases</a>
-        <a class="nav__link" href="#">Pricing</a>
-        <a class="nav__link" href="#">Research</a>
-        <a class="nav__link" href="#">Company</a>
+      <nav class="nav" aria-label="Điều hướng chính">
+        <a class="nav__link" href="#overview">Tổng quan</a>
+        <a class="nav__link" href="#attractions">Điểm đến</a>
+        <a class="nav__link" href="#cuisine">Ẩm thực</a>
+        <a class="nav__link" href="#economy">Kinh tế &amp; Công nghiệp</a>
+        <a class="nav__link" href="#gallery">Hình ảnh</a>
       </nav>
 
       <div class="nav-actions">
-        <a class="text-link" href="#">Sign in</a>
-        <a class="btn btn--primary" href="#">Try Claude</a>
+        <button class="btn btn--secondary" type="button" data-scroll-to="#gallery">Xem ảnh</button>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero-band">
-      <div class="container hero-band__grid">
-        <div class="hero-band__copy">
-          <div class="badge-row">
-            <span class="badge badge--coral">NEW</span>
-            <span class="badge">Warm editorial UI</span>
-          </div>
+  <main id="main">
+    <!-- HERO (with parallax) -->
+    <section class="hero" aria-label="Giới thiệu Đồng Nai">
+      <div class="hero__parallax" aria-hidden="true">
+        <div class="parallax-layer parallax-layer--bg"></div>
+        <div class="parallax-layer parallax-layer--mid"></div>
+        <div class="parallax-layer parallax-layer--fg"></div>
+      </div>
 
-          <h1 class="display-xl hero-title">Meet your thinking partner.</h1>
-          <p class="body-md hero-subtitle">
-            A cream canvas with coral voltage and dark product surfaces—built to feel like a long-form magazine.
+      <div class="container hero__content">
+        <div class="hero__copy" data-reveal="fade-up">
+          <div class="hero__badge" data-reveal="fade-up" data-aos-delay="100">Nhiều sắc thái — một hành trình</div>
+          <h1 class="hero__title">Khám phá Đồng Nai, nơi thiên nhiên xanh mát &amp; năng lượng bứt phá</h1>
+          <p class="hero__subtitle" data-reveal="fade-up" data-aos-delay="150">
+            Từ Vườn quốc gia Cát Tiên đến Bửu Long và chùa Trấn Biên — cùng nền ẩm thực đậm vị và động lực kinh tế đang vươn mình.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn--primary" href="#">Start a chat</a>
-            <a class="btn btn--secondary" href="#">Explore features</a>
+          <div class="hero__actions" data-reveal="fade-up" data-aos-delay="200">
+            <a class="btn btn--primary" href="#attractions" data-scroll-to="#attractions">Điểm đến nổi bật</a>
+            <a class="btn btn--glass" href="#overview" data-scroll-to="#overview">Tìm hiểu thêm</a>
+          </div>
+
+          <div class="hero__stats" data-aos="fade-up" data-aos-delay="250">
+            <div class="stat">
+              <div class="stat__value">3</div>
+              <div class="stat__label">Điểm đến tiêu biểu</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">Ẩm thực</div>
+              <div class="stat__label">Đậm hương miền Đông</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">Công nghiệp</div>
+              <div class="stat__label">Động lực tăng trưởng</div>
+            </div>
           </div>
         </div>
 
-        <div class="hero-band__art">
-          <div class="product-mockup-card-dark">
-            <div class="mockup-top">
-              <span class="dot dot--success" title="Connected"></span>
-              <span class="mockup-title">Claude workspace</span>
-              <span class="mockup-kbd">⌘ K</span>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="visual-card" data-reveal="zoom-in">
+            <div class="visual-card__top">
+              <div class="pill pill--green">Thiên nhiên</div>
+              <div class="pill pill--amber">Văn hóa</div>
+              <div class="pill pill--blue">Hiện đại</div>
             </div>
 
-            <div class="mockup-body">
-              <div class="chat-line chat-line--user">
-                <span class="chat-label">You</span>
-                <span class="chat-text">Design this like an editorial publication.</span>
-              </div>
-              <div class="chat-line chat-line--assistant">
-                <span class="chat-label">Claude</span>
-                <span class="chat-text">Done—cream canvas, coral CTAs, and dark product surfaces.</span>
-              </div>
+            <div class="visual-card__canvas">
+              <div class="mini-map"></div>
+              <div class="mini-marker mini-marker--1" data-float></div>
+              <div class="mini-marker mini-marker--2" data-float data-float-speed="1.2"></div>
+              <div class="mini-marker mini-marker--3" data-float data-float-speed="0.8"></div>
+            </div>
 
-              <div class="code-window-card" aria-label="Code example">
-                <div class="code-window-card__header">
-                  <span class="code-window-card__pill">claude-ui.ts</span>
-                  <span class="code-window-card__muted">Run</span>
-                </div>
-                <pre class="code-window-card__code"><code><span class="tok-keyword">const</span> ui <span class="tok-op">=</span> <span class="tok-brace">{</span>
-  canvas: <span class="tok-string">"#faf9f5"</span>,
-  coral: <span class="tok-string">"#cc785c"</span>,
-  ink: <span class="tok-string">"#141413"</span>
-<span class="tok-brace">}</span>;</code></pre>
+            <div class="visual-card__bottom">
+              <div class="signal">
+                <span class="signal__dot" aria-hidden="true"></span>
+                <span class="signal__text">Trải nghiệm đang cập nhật</span>
+              </div>
+              <div class="scroll-indicator">
+                <span class="scroll-indicator__wheel" aria-hidden="true"></span>
+                <span class="scroll-indicator__text">Cuộn xuống</span>
               </div>
             </div>
           </div>
+
+          <!-- Floating decorative elements -->
+          <div class="decor decor--leaf decor--1" data-float aria-hidden="true"></div>
+          <div class="decor decor--leaf decor--2" data-float aria-hidden="true"></div>
+          <div class="decor decor--leaf decor--3" data-float aria-hidden="true"></div>
+          <div class="decor decor--spark" data-float data-float-speed="1.4" aria-hidden="true"></div>
         </div>
       </div>
+
+      <div class="hero__scroll-space" aria-hidden="true"></div>
     </section>
 
-    <section class="section">
+    <!-- Overview -->
+    <section class="section section--soft" id="overview" data-aos="fade-up">
       <div class="container">
         <div class="section-head">
-          <h2 class="display-lg">Components that feel native</h2>
-          <p class="body-md muted">Buttons, cards, tabs, inputs—tuned to the same warm editorial system.</p>
-        </div>
-
-        <div class="grid grid--3">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">✶</div>
-            <h3 class="title-md">Cream + Hairline</h3>
-            <p class="body-md muted">Tactile spacing and subtle 1px borders instead of heavy shadows.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">⟡</div>
-            <h3 class="title-md">Coral Only Where It Matters</h3>
-            <p class="body-md muted">Scarce accent moments—primary CTAs and full-bleed callouts.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">⌁</div>
-            <h3 class="title-md">Dark Product Surfaces</h3>
-            <p class="body-md muted">Show the chrome: code blocks, terminal panels, and tables.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--tight">
-      <div class="container">
-        <div class="callout-card-coral callout">
-          <h2 class="display-sm">Try Claude—made warm, not sterile.</h2>
-          <p class="body-md on-primary callout__sub">
-            Coral voltage for intent. Dark navy for product truth. Cream canvas for editorial pacing.
+          <h2 class="section-head__title">Tổng quan Đồng Nai</h2>
+          <p class="section-head__subtitle">
+            Một vùng đất giao hòa giữa rừng xanh, sông nước và nhịp sống đô thị — đủ để bạn vừa thư giãn vừa khám phá.
           </p>
-          <div class="callout__actions">
-            <a class="btn btn--on-coral" href="#">Get started</a>
-            <a class="btn btn--secondary on-coral-secondary" href="#">Learn more</a>
+        </div>
+
+        <div class="overview-grid">
+          <article class="card" data-reveal="fade-up" data-aos-delay="50">
+            <h3 class="card__title">Vị trí &amp; kết nối</h3>
+            <p class="card__text">
+              Nằm trong vùng kinh tế trọng điểm phía Nam, Đồng Nai thuận lợi cho du lịch ngắn ngày lẫn hành trình dài.
+            </p>
+            <ul class="bullets">
+              <li>Khoảng cách dễ di chuyển</li>
+              <li>Trải nghiệm đa dạng</li>
+              <li>Nhịp sống hiện đại</li>
+            </ul>
+          </article>
+
+          <article class="card" data-reveal="fade-up" data-aos-delay="100">
+            <h3 class="card__title">Thiên nhiên trù phú</h3>
+            <p class="card__text">
+              Từ hệ sinh thái rừng đến thác suối và hồ nước — mọi góc nhìn đều có màu xanh của sự cân bằng.
+            </p>
+            <div class="mini-progress" aria-hidden="true">
+              <div class="mini-progress__bar" style="--pct:86%"></div>
+              <div class="mini-progress__label">Xanh mát</div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal="fade-up" data-aos-delay="150">
+            <h3 class="card__title">Văn hóa &amp; lịch sử</h3>
+            <p class="card__text">
+              Những di tích như Trấn Biên mang lại chiều sâu — giúp hành trình của bạn có thêm câu chuyện.
+            </p>
+            <div class="quote" role="note">
+              <span class="quote__mark" aria-hidden="true">“</span>
+              <span class="quote__text">Du lịch là cách chạm vào ký ức.</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tourist attractions -->
+    <section class="section" id="attractions">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <h2 class="section-head__title">Điểm đến nổi bật</h2>
+          <p class="section-head__subtitle">Ba điểm chạm tiêu biểu: rừng đại ngàn, miền tâm linh và không gian thư thái.</p>
+        </div>
+
+        <div class="attractions">
+          <article class="attraction" data-aos="fade-up" data-aos-delay="50">
+            <div class="attraction__media">
+              <div class="attraction__image attraction__image--cat-tien" role="img" aria-label="Vườn quốc gia Cát Tiên"></div>
+              <div class="attraction__badge">Vườn quốc gia Cát Tiên</div>
+            </div>
+            <div class="attraction__body">
+              <h3 class="attraction__title">Cát Tiên — thiên nhiên trong trẻo</h3>
+              <p class="attraction__text">
+                Hòa mình giữa rừng xanh, khám phá hệ sinh thái phong phú và cảm nhận nhịp sống hoang dã.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Đa dạng sinh học</span>
+                <span class="tag tag--amber">Check-in thiên nhiên</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="attraction" data-aos="fade-up" data-aos-delay="100">
+            <div class="attraction__media">
+              <div class="attraction__image attraction__image--buu-long" role="img" aria-label="Khu du lịch Bửu Long"></div>
+              <div class="attraction__badge">Bửu Long</div>
+            </div>
+            <div class="attraction__body">
+              <h3 class="attraction__title">Bửu Long — bình yên giữa cảnh sắc</h3>
+              <p class="attraction__text">
+                Thư thái với không gian xanh, những góc nhìn đẹp và trải nghiệm nhẹ nhàng cho mọi lứa tuổi.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Không gian xanh</span>
+                <span class="tag tag--blue">Gợi ý đi cùng gia đình</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="attraction" data-aos="fade-up" data-aos-delay="150">
+            <div class="attraction__media">
+              <div class="attraction__image attraction__image--tran-bien" role="img" aria-label="Chùa Trấn Biên"></div>
+              <div class="attraction__badge">Chùa Trấn Biên</div>
+            </div>
+            <div class="attraction__body">
+              <h3 class="attraction__title">Trấn Biên — nét văn hóa &amp; tâm linh</h3>
+              <p class="attraction__text">
+                Chiêm ngưỡng kiến trúc đặc sắc, tìm hiểu câu chuyện lịch sử và tận hưởng không khí thanh tịnh.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Kiến trúc cổ</span>
+                <span class="tag tag--amber">Chuyến đi giàu ý nghĩa</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local cuisine -->
+    <section class="section section--soft" id="cuisine" data-aos="fade-up">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-head__title">Ẩm thực địa phương</h2>
+          <p class="section-head__subtitle">Hương vị miền Đông: đậm đà, thơm ấm và dễ nhớ.</p>
+        </div>
+
+        <div class="cuisine-grid">
+          <article class="cuisine-card" data-reveal="fade-up" data-aos-delay="50">
+            <div class="cuisine-card__icon" aria-hidden="true">🍜</div>
+            <h3 class="cuisine-card__title">Bún &amp; món nước</h3>
+            <p class="cuisine-card__text">Nước dùng trong veo, đậm vị, ăn một lần là muốn tìm thêm.</p>
+            <div class="cuisine-card__meta">Gợi ý: sáng &amp; trưa</div>
+          </article>
+
+          <article class="cuisine-card" data-reveal="fade-up" data-aos-delay="100">
+            <div class="cuisine-card__icon" aria-hidden="true">🥩</div>
+            <h3 class="cuisine-card__title">Món nướng &amp; đặc sản</h3>
+            <p class="cuisine-card__text">Hương khói nhẹ, vị ngọt tự nhiên và cảm giác “ấm bụng”.</p>
+            <div class="cuisine-card__meta">Gợi ý: chiều tối</div>
+          </article>
+
+          <article class="cuisine-card" data-reveal="fade-up" data-aos-delay="150">
+            <div class="cuisine-card__icon" aria-hidden="true">🥭</div>
+            <h3 class="cuisine-card__title">Trái cây &amp; đồ uống</h3>
+            <p class="cuisine-card__text">Tươi mát, dễ uống — lựa chọn hoàn hảo cho ngày nắng.</p>
+            <div class="cuisine-card__meta">Gợi ý: mọi thời điểm</div>
+          </article>
+        </div>
+
+        <div class="cta-inline">
+          <div class="cta-inline__bg" aria-hidden="true"></div>
+          <div class="cta-inline__content" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="cta-inline__title">Sẵn sàng cho một “gu” Đồng Nai?</h3>
+            <p class="cta-inline__text">Lưu lại các gợi ý và lên lịch cho chuyến đi sắp tới.</p>
+            <div class="cta-inline__actions">
+              <a class="btn btn--primary" href="#gallery" data-scroll-to="#gallery">Xem không gian</a>
+              <a class="btn btn--glass" href="#economy" data-scroll-to="#economy">Vì sao phát triển?</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--footer-cta">
+    <!-- Economy & Industry -->
+    <section class="section" id="economy" data-aos="fade-up">
       <div class="container">
-        <div class="cta-band-dark cta">
-          <h2 class="display-sm">Developer-ready layouts</h2>
-          <p class="body-md on-dark-ink">Code windows that preserve legibility and horizontal scroll.</p>
-          <div class="cta__actions">
-            <a class="btn btn--secondary-on-dark" href="#">View code demo</a>
+        <div class="section-head">
+          <h2 class="section-head__title">Kinh tế &amp; Công nghiệp</h2>
+          <p class="section-head__subtitle">Không chỉ là điểm đến — Đồng Nai còn là động lực tăng trưởng của vùng Đông Nam Bộ.</p>
+        </div>
+
+        <div class="economy-grid">
+          <article class="econ-card" data-reveal="fade-up" data-aos-delay="50">
+            <div class="econ-card__icon" aria-hidden="true">🏭</div>
+            <h3 class="econ-card__title">Cụm công nghiệp</h3>
+            <p class="econ-card__text">Nhiều dự án tạo việc làm, nâng cao hạ tầng và thúc đẩy liên kết chuỗi giá trị.</p>
+          </article>
+
+          <article class="econ-card" data-reveal="fade-up" data-aos-delay="100">
+            <div class="econ-card__icon" aria-hidden="true">🚚</div>
+            <h3 class="econ-card__title">Logistics &amp; thương mại</h3>
+            <p class="econ-card__text">Kết nối thuận lợi giúp vận hành kinh doanh hiệu quả và mở rộng thị trường.</p>
+          </article>
+
+          <article class="econ-card" data-reveal="fade-up" data-aos-delay="150">
+            <div class="econ-card__icon" aria-hidden="true">🌾</div>
+            <h3 class="econ-card__title">Nông nghiệp công nghệ</h3>
+            <p class="econ-card__text">Tăng chất lượng sản phẩm, cải thiện năng suất và phát triển bền vững.</p>
+          </article>
+        </div>
+
+        <div class="econ-meter" data-aos="fade-up" data-aos-delay="200">
+          <div class="meter-head">
+            <div class="meter-title">Nhịp tăng trưởng (mô phỏng)</div>
+            <div class="meter-sub">Thiết kế hiển thị đẹp — không phải số liệu chính thức</div>
+          </div>
+          <div class="meter-bars" aria-hidden="true">
+            <div class="meter-bar" style="--h:78%"><span>Du lịch</span></div>
+            <div class="meter-bar" style="--h:86%"><span>Công nghiệp</span></div>
+            <div class="meter-bar" style="--h:74%"><span>Thương mại</span></div>
+            <div class="meter-bar" style="--h:81%"><span>Nông nghiệp</span></div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Photo gallery (Swiper) -->
+    <section class="section section--soft" id="gallery" data-aos="fade-up">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-head__title">Thư viện hình ảnh</h2>
+          <p class="section-head__subtitle">Trượt để khám phá: rừng xanh, không gian văn hóa và nhịp sống hiện đại.</p>
+        </div>
+
+        <div class="swiper mySwiper" aria-label="Bộ sưu tập ảnh">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure class="shot" data-reveal="fade-up">
+                <div class="shot__img shot__img--1" role="img" aria-label="Cát Tiên"></div>
+                <figcaption class="shot__cap">Cát Tiên — màu xanh của tự nhiên</figcaption>
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="shot" data-reveal="fade-up" data-aos-delay="50">
+                <div class="shot__img shot__img--2" role="img" aria-label="Bửu Long"></div>
+                <figcaption class="shot__cap">Bửu Long — bình yên và thư thái</figcaption>
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="shot" data-reveal="fade-up" data-aos-delay="100">
+                <div class="shot__img shot__img--3" role="img" aria-label="Trấn Biên"></div>
+                <figcaption class="shot__cap">Trấn Biên — chiều sâu văn hóa</figcaption>
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="shot" data-reveal="fade-up" data-aos-delay="150">
+                <div class="shot__img shot__img--4" role="img" aria-label="Ẩm thực"></div>
+                <figcaption class="shot__cap">Ẩm thực — đậm vị miền Đông</figcaption>
+              </figure>
+            </div>
+            <div class="swiper-slide">
+              <figure class="shot" data-reveal="fade-up" data-aos-delay="200">
+                <div class="shot__img shot__img--5" role="img" aria-label="Nhịp sống"></div>
+                <figcaption class="shot__cap">Nhịp sống — hướng tới tương lai</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev" aria-hidden="true"></div>
+          <div class="swiper-button-next" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo" aria-label="Chân trang">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <div class="footer__brand-mark" aria-hidden="true">⛰</div>
+          <div>
+            <div class="footer__brand-title">Đồng Nai</div>
+            <div class="footer__brand-sub">Landing page hiện đại với GSAP, AOS &amp; Swiper</div>
+          </div>
+        </div>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <div class="footer__col-title">Điều hướng</div>
+            <a class="footer__link" href="#overview">Tổng quan</a>
+            <a class="footer__link" href="#attractions">Điểm đến</a>
+            <a class="footer__link" href="#cuisine">Ẩm thực</a>
+            <a class="footer__link" href="#economy">Kinh tế</a>
+          </div>
+
+          <div class="footer__col">
+            <div class="footer__col-title">Gợi ý</div>
+            <a class="footer__link" href="#gallery">Xem ảnh</a>
+            <a class="footer__link" href="#" onclick="return false;">Lịch trình mẫu</a>
+            <a class="footer__link" href="#" onclick="return false;">Khung giờ đẹp</a>
+          </div>
+
+          <div class="footer__col">
+            <div class="footer__col-title">Thông tin</div>
+            <span class="footer__muted">Thiết kế responsive • Tối ưu trải nghiệm</span>
+            <span class="footer__muted">Tôn trọng Reduced Motion</span>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year"></span> Dong Nai Landing</span>
+          <span class="footer__dot" aria-hidden="true">•</span>
+          <span>Made for modern scroll</span>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <footer class="footer" role="contentinfo">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <div class="footer__brand-row">
-          <span class="spike-mark spike-mark--footer" aria-hidden="true">✶</span>
-          <span class="footer__brand-word">Anthropic</span>
-        </div>
-        <p class="body-sm muted-soft">Warm editorial UI system inspired by Claude.</p>
-      </div>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-      <div class="footer__cols">
-        <div>
-          <div class="footer__col-title">Product</div>
-          <a class="footer__link" href="#">Overview</a>
-          <a class="footer__link" href="#">Model details</a>
-          <a class="footer__link" href="#">Changelog</a>
-        </div>
-        <div>
-          <div class="footer__col-title">Company</div>
-          <a class="footer__link" href="#">About</a>
-          <a class="footer__link" href="#">Careers</a>
-          <a class="footer__link" href="#">Press</a>
-        </div>
-        <div>
-          <div class="footer__col-title">Resources</div>
-          <a class="footer__link" href="#">Docs</a>
-          <a class="footer__link" href="#">Guides</a>
-          <a class="footer__link" href="#">Status</a>
-        </div>
-        <div>
-          <div class="footer__col-title">Legal</div>
-          <a class="footer__link" href="#">Privacy</a>
-          <a class="footer__link" href="#">Terms</a>
-          <a class="footer__link" href="#">Cookies</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <script>
+    // Smooth scroll (respect reduced motion)
+    (function () {
+      const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduced) {
+        document.documentElement.style.scrollBehavior = 'smooth';
+      }
 
-  <aside class="cookie-consent-card" aria-label="Cookie consent">
-    <div class="caption">Cookie settings</div>
-    <div class="body-sm">
-      We use cookies to keep this UI feeling fast. This banner is a static demo.
-    </div>
-    <div class="cookie-consent-actions">
-      <a class="btn btn--secondary-on-dark" href="#">Accept</a>
-      <a class="btn btn--text-link-on-dark" href="#">Manage</a>
-    </div>
-  </aside>
+      // Loading overlay
+      const loadingEl = document.getElementById('loading');
+      const done = () => {
+        if (!loadingEl) return;
+        loadingEl.classList.add('loading--done');
+        setTimeout(() => loadingEl.remove(), 650);
+      };
+
+      // Ensure fonts/images are ready (best-effort)
+      if (document.readyState === 'complete') {
+        setTimeout(done, 300);
+      } else {
+        window.addEventListener('load', () => setTimeout(done, 250), { once: true });
+      }
+
+      // Year
+      const y = document.getElementById('year');
+      if (y) y.textContent = String(new Date().getFullYear());
+
+      // Anchor click smooth scroll via data-scroll-to
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-scroll-to]');
+        if (!btn) return;
+        const sel = btn.getAttribute('data-scroll-to');
+        if (!sel) return;
+        const target = document.querySelector(sel);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+      });
+    })();
+
+    // AOS init
+    (function () {
+      const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced) {
+        // Minimal AOS to avoid motion
+        AOS.init({ duration: 0, once: true, disable: true });
+        return;
+      }
+      AOS.init({
+        duration: 700,
+        once: true,
+        offset: 120,
+      });
+    })();
+
+    // GSAP + ScrollTrigger + parallax + text reveals
+    (function () {
+      const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced) return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      const hero = document.querySelector('.hero');
+      const layers = document.querySelectorAll('.parallax-layer');
+
+      if (hero && layers.length) {
+        // Parallax: move background layers at different rates
+        layers.forEach((layer, idx) => {
+          const speed = [40, 70, 110][idx] || 60;
+          gsap.to(layer, {
+            y: speed * -1,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: hero,
+              start: 'top top',
+              end: 'bottom top',
+              scrub: true,
+            }
+          });
+        });
+      }
+
+      // Reveal text elements with a consistent style
+      const revealEls = document.querySelectorAll('[data-reveal]');
+      revealEls.forEach((el) => {
+        const kind = el.getAttribute('data-reveal') || 'fade-up';
+        gsap.fromTo(el, {
+          y: kind === 'zoom-in' ? 14 : 24,
+          opacity: 0,
+          scale: kind === 'zoom-in' ? 0.98 : 1,
+        }, {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            once: true
+          }
+        });
+      });
+
+      // Decorative floating elements
+      const floatEls = document.querySelectorAll('[data-float]');
+      floatEls.forEach((el) => {
+        const sp = parseFloat(el.getAttribute('data-float-speed') || '1');
+        const dist = 10 * sp;
+        gsap.to(el, {
+          y: dist * -1,
+          ease: 'sine.inOut',
+          duration: 2.8 / sp,
+          repeat: -1,
+          yoyo: true,
+          delay: Math.random() * 0.6
+        });
+      });
+
+      // Hover effects on cards (subtle)
+      const hoverCards = document.querySelectorAll('.card, .attraction, .cuisine-card, .econ-card, .shot');
+      hoverCards.forEach((card) => {
+        card.addEventListener('mouseenter', () => {
+          gsap.to(card, { y: -3, duration: 0.25, ease: 'power2.out' });
+        });
+        card.addEventListener('mouseleave', () => {
+          gsap.to(card, { y: 0, duration: 0.25, ease: 'power2.out' });
+        });
+      });
+    })();
+
+    // Swiper gallery
+    (function () {
+      const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const el = document.querySelector('.mySwiper');
+      if (!el) return;
+
+      const swiper = new Swiper(el, {
+        loop: true,
+        grabCursor: true,
+        slidesPerView: 1,
+        spaceBetween: 16,
+        centeredSlides: true,
+        speed: reduced ? 0 : 700,
+        autoplay: reduced ? false : {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          640: { slidesPerView: 1.2 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 2.5 },
+        }
+      });
+
+      // Refresh AOS/GSAP reveals after swiper init (best-effort)
+      if (!reduced && window.AOS && window.AOS.refreshHard) window.AOS.refreshHard();
+    })();
+  </script>
 </body>
 </html>
 
