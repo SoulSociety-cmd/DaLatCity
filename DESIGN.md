@@ -7,7 +7,7 @@ colors:
   primary: "#cc785c"
   primary-active: "#a9583e"
   primary-disabled: "#e6dfd8"
-  ink: "#141413"
+  ink: "#5f5f43"
   body: "#3d3d3a"
   body-strong: "#252523"
   muted: "#6c6a64"
