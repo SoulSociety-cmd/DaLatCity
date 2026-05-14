@@ -583,9 +583,22 @@
         }
       });
 
-      // Refresh AOS/GSAP reveals after swiper init (best-effort)
+        // Refresh AOS/GSAP reveals after swiper init (best-effort)
       if (!reduced && window.AOS && window.AOS.refreshHard) window.AOS.refreshHard();
+
+      // Gallery extra: force a small reflow so CSS transition/animations feel responsive
+      // (no content changes)
+      if (!reduced) {
+        const updateActiveStates = () => {
+          const active = el.querySelector('.swiper-slide-active');
+          if (!active) return;
+          active.classList.add('gallery-active');
+        };
+        updateActiveStates();
+        swiper.on('slideChange', updateActiveStates);
+      }
     })();
+
   </script>
 </body>
 </html>
