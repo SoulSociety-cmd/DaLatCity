@@ -1,426 +1,188 @@
-<!doctype html>
-<html lang="vi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đồng Nai Landing</title>
-
-  <!-- Swiper + AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <title>Aurora Valley | Discover Breathtaking Nature</title>
   
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="./styles.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <!-- Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- Loading Overlay -->
-  <div id="loading">
-    <div class="loading__card">
-      <div class="loading__ring"></div>
-      <div class="loading__title">Đang tải trải nghiệm...</div>
-      <div class="loading__hint">Chuẩn bị khám phá Đồng Nai</div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">Aurora<span>Valley</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#culture">Culture</a></li>
+    </ul>
+    <a href="#cta" class="btn-outline">Plan Your Trip</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <!-- USER: Add your background image or video here -->
+    <div class="hero-bg gradient-placeholder"></div>
+    <div class="hero-overlay"></div>
+    
+    <!-- Floating Elements (Parallax) -->
+    <div class="floating-elements">
+      <div class="particle p1"></div>
+      <div class="particle p2"></div>
+      <div class="particle p3"></div>
+      <div class="particle p4"></div>
     </div>
-  </div>
 
-  <a href="#main" class="skip-link">Bỏ qua đến nội dung chính</a>
-
-  <!-- Top Navigation -->
-  <header class="top-nav">
-    <div class="container top-nav__inner">
-      <div class="brand">
-        <div class="brand__mark">🌟</div>
-        <div class="brand__word">Đồng Nai</div>
-      </div>
-      <nav class="nav">
-        <a href="#kham-pha" class="nav__link">Khám Phá</a>
-        <a href="#am-thuc" class="nav__link">Ẩm Thực</a>
-        <a href="#kinh-te" class="nav__link">Kinh Tế</a>
-        <a href="#thu-vien" class="nav__link">Thư Viện</a>
-      </nav>
-      <div class="nav-actions">
-        <a href="#" class="btn btn--glass">Đăng nhập</a>
-        <a href="#" class="btn btn--primary">Trải nghiệm ngay</a>
+    <div class="hero-content">
+      <h1 class="hero-title">Experience the <br><span>Untamed Beauty</span></h1>
+      <p class="hero-subtitle">Immerse yourself in nature, culture, and adventure at Aurora Valley.</p>
+      <div class="scroll-indicator">
+        <span>Scroll to discover</span>
+        <i class="ph ph-caret-down"></i>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero">
-      <!-- Parallax Background Layers -->
-      <div class="hero__parallax">
-        <div class="parallax-layer parallax-layer--bg"></div>
-        <div class="parallax-layer parallax-layer--mid"></div>
-        <div class="parallax-layer parallax-layer--fg"></div>
-      </div>
-
-      <div class="container hero__content">
-        <!-- Left Content -->
-        <div class="hero__text-col">
-          <div class="hero__badge" data-aos="fade-down">
-            ✨ Cửa ngõ miền Nam
-          </div>
-          <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
-            Khám phá tinh hoa<br>vùng đất Đồng Nai
-          </h1>
-          <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">
-            Hòa mình vào thiên nhiên hoang sơ, thưởng thức ẩm thực đặc sắc và chứng kiến nhịp đập của vùng kinh tế trọng điểm sôi động bậc nhất Việt Nam.
-          </p>
-          
-          <div class="hero__actions" data-aos="fade-up" data-aos-delay="300">
-            <a href="#kham-pha" class="btn btn--primary">Bắt đầu hành trình</a>
-            <a href="#thu-vien" class="btn btn--secondary">Xem video giới thiệu</a>
-          </div>
-
-          <div class="hero__stats" data-aos="fade-up" data-aos-delay="400">
-            <div class="stat">
-              <div class="stat__value">11</div>
-              <div class="stat__label">Huyện/Thành phố</div>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">A Journey Beyond the Ordinary</h2>
+          <p>Nestled between mist-covered peaks and crystal-clear streams, Aurora Valley is a sanctuary for the soul. It’s where time slows down, allowing you to connect deeply with breathtaking landscapes and rich local traditions.</p>
+          <a href="#" class="btn-text">Discover Our Story <i class="ph ph-arrow-right"></i></a>
+        </div>
+        <div class="about-visual">
+          <div class="glass-card">
+            <!-- USER: Add your image here -->
+            <div class="image-placeholder">
+              <span>Image Placeholder</span>
             </div>
-            <div class="stat__value">32+</div>
-            <div class="stat__label">Khu công nghiệp</div>
-            <div class="stat__value">3.2M</div>
-            <div class="stat__label">Dân số</div>
+            <div class="card-content">
+              <h3>Serene Landscapes</h3>
+              <p>Explore miles of untouched wilderness.</p>
+            </div>
           </div>
         </div>
-
-        <!-- Right Visual Card -->
-        <div class="hero__visual" data-aos="fade-left" data-aos-delay="300">
-          <div class="visual-card">
-            <div class="visual-card__top">
-              <span class="pill pill--green">Du lịch sinh thái</span>
-              <span class="pill pill--amber">Công nghiệp</span>
-              <span class="pill pill--blue">Văn hóa</span>
-            </div>
-            <div class="visual-card__canvas">
-              <div class="mini-map"></div>
-              <div class="mini-marker mini-marker--1"></div>
-              <div class="mini-marker mini-marker--2"></div>
-              <div class="mini-marker mini-marker--3"></div>
-            </div>
-            <div class="visual-card__bottom">
-              <div class="signal">
-                <div class="signal__dot"></div>
-                <div class="signal__text">Live: Trị An Water Flow</div>
-              </div>
-              <div class="scroll-indicator">
-                <div class="scroll-indicator__wheel"></div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Floating Decors -->
-          <div class="decor decor--leaf decor--1"></div>
-          <div class="decor decor--leaf decor--2"></div>
-          <div class="decor decor--leaf decor--3"></div>
-          <div class="decor decor--spark"></div>
-        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Highlights Section -->
+  <section class="highlights" id="highlights">
+    <div class="container">
+      <h2 class="section-title text-center">Must-See Destinations</h2>
+      <p class="section-subtitle text-center">Curated spots that define the essence of Aurora Valley.</p>
       
-      <div class="hero__scroll-space"></div>
-    </section>
-
-    <!-- ATTRACTIONS SECTION -->
-    <section id="kham-pha" class="section section--soft">
-      <div class="container">
-        <div class="section-head" data-aos="fade-up">
-          <h2 class="section-head__title">Điểm đến nổi bật</h2>
-          <p class="section-head__subtitle">Từ những khu rừng nguyên sinh bạt ngàn đến những di tích lịch sử văn hóa lâu đời, Đồng Nai mang đến những trải nghiệm du lịch đa dạng và khó quên.</p>
+      <!-- Swiper -->
+      <div class="swiper highlights-slider">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <!-- USER: Add your image here as background -->
+            <div class="slide-bg slide-placeholder-1"></div>
+            <div class="slide-content">
+              <h3>Whispering Falls</h3>
+              <p>A hidden cascade surrounded by ancient forests.</p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="slide-bg slide-placeholder-2"></div>
+            <div class="slide-content">
+              <h3>Lantern Village</h3>
+              <p>Immersive cultural nights filled with glowing lights.</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="slide-bg slide-placeholder-3"></div>
+            <div class="slide-content">
+              <h3>Skyline Ridge</h3>
+              <p>Hike above the clouds for breathtaking sunsets.</p>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="slide-bg slide-placeholder-4"></div>
+            <div class="slide-content">
+              <h3>Emerald Lake</h3>
+              <p>Crystal clear waters reflecting the majestic peaks.</p>
+            </div>
+          </div>
         </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
 
-        <div class="attractions">
-          <div class="attraction" data-aos="fade-up" data-aos-delay="100">
-            <div class="attraction__media">
-              <div class="attraction__image attraction__image--cat-tien"></div>
-              <div class="attraction__badge">Rừng nguyên sinh</div>
-            </div>
-            <div class="attraction__body">
-              <h3 class="attraction__title">Vườn Quốc Gia Cát Tiên</h3>
-              <p class="attraction__text">Khu bảo tồn thiên nhiên thế giới với hệ động thực vật phong phú, điểm đến lý tưởng cho người yêu thiên nhiên.</p>
-              <div class="tag-row">
-                <span class="tag tag--amber">#Trekking</span>
-                <span class="tag tag--blue">#KhámPhá</span>
-              </div>
-            </div>
+  <!-- Culture & Experience Section -->
+  <section class="culture" id="culture">
+    <div class="container">
+      <h2 class="section-title text-center text-light">Immerse in Culture</h2>
+      <div class="culture-grid">
+        <div class="culture-item">
+          <div class="icon-wrapper">
+             <i class="ph ph-bowl-food"></i>
           </div>
-
-          <div class="attraction" data-aos="fade-up" data-aos-delay="200">
-            <div class="attraction__media">
-              <div class="attraction__image attraction__image--buu-long"></div>
-              <div class="attraction__badge">Du lịch sinh thái</div>
-            </div>
-            <div class="attraction__body">
-              <h3 class="attraction__title">Khu Du Lịch Bửu Long</h3>
-              <p class="attraction__text">Được mệnh danh là "Vịnh Hạ Long thu nhỏ" với hồ nước trong xanh, núi đá nhân tạo và cảnh quan thanh bình.</p>
-              <div class="tag-row">
-                <span class="tag tag--amber">#DãNgoại</span>
-                <span class="tag tag--blue">#GiaĐình</span>
-              </div>
-            </div>
+          <h3>Local Gastronomy</h3>
+          <p>Taste authentic dishes made from fresh, valley-grown ingredients.</p>
+        </div>
+        <div class="culture-item">
+          <div class="icon-wrapper">
+             <i class="ph ph-tent"></i>
           </div>
-
-          <div class="attraction" data-aos="fade-up" data-aos-delay="300">
-            <div class="attraction__media">
-              <div class="attraction__image attraction__image--tran-bien"></div>
-              <div class="attraction__badge">Văn hóa lịch sử</div>
-            </div>
-            <div class="attraction__body">
-              <h3 class="attraction__title">Văn Miếu Trấn Biên</h3>
-              <p class="attraction__text">Di tích quốc gia, biểu tượng của truyền thống hiếu học và nét đẹp văn hóa lịch sử của vùng đất phương Nam.</p>
-              <div class="tag-row">
-                <span class="tag tag--amber">#LịchSử</span>
-                <span class="tag tag--blue">#VănHóa</span>
-              </div>
-            </div>
+          <h3>Traditional Festivals</h3>
+          <p>Join the vibrant celebrations that honor our ancestors.</p>
+        </div>
+        <div class="culture-item">
+          <div class="icon-wrapper">
+             <i class="ph ph-mountains"></i>
           </div>
+          <h3>Guided Adventures</h3>
+          <p>Experience the valley with expert local guides.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CUISINE SECTION -->
-    <section id="am-thuc" class="section">
-      <div class="container">
-        <div class="section-head" data-aos="fade-up">
-          <h2 class="section-head__title">Hương vị Đồng Nai</h2>
-          <p class="section-head__subtitle">Đậm đà tình quê hương với những món ăn dân dã, đặc sản miệt vườn không thể chối từ.</p>
-        </div>
+  <!-- Call to Action Section -->
+  <section class="cta" id="cta">
+    <!-- Parallax Night Sky Background -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="cta-content">
+      <h2 class="cta-title">Ready for the Adventure?</h2>
+      <p>Book your journey today and create memories that will last a lifetime.</p>
+      <button class="btn-glow">Start Your Journey</button>
+    </div>
+  </section>
 
-        <div class="cuisine-grid">
-          <div class="cuisine-card" data-aos="zoom-in" data-aos-delay="100">
-            <div class="cuisine-card__icon">🍜</div>
-            <h3 class="cuisine-card__title">Phở/Hủ tiếu Nam Vang</h3>
-            <p class="cuisine-card__text">Tuy không phải gốc Đồng Nai nhưng được chế biến với hương vị đặc trưng, nước dùng ngọt thanh đậm đà.</p>
-            <div class="cuisine-card__meta">Nổi bật tại Biên Hòa</div>
-          </div>
-          
-          <div class="cuisine-card" data-aos="zoom-in" data-aos-delay="200">
-            <div class="cuisine-card__icon">🍊</div>
-            <h3 class="cuisine-card__title">Bưởi Tân Triều</h3>
-            <p class="cuisine-card__text">Đặc sản nức tiếng với những tép bưởi mọng nước, vị ngọt thanh và món gỏi bưởi trứ danh.</p>
-            <div class="cuisine-card__meta">Đặc sản trái cây</div>
-          </div>
-
-          <div class="cuisine-card" data-aos="zoom-in" data-aos-delay="300">
-            <div class="cuisine-card__icon">🐟</div>
-            <h3 class="cuisine-card__title">Lẩu lá giang sông Buông</h3>
-            <p class="cuisine-card__text">Món lẩu chua chua cay cay đặc trưng, nấu cùng cá suối sông Buông tươi ngon, dân dã.</p>
-            <div class="cuisine-card__meta">Ẩm thực sông nước</div>
-          </div>
-        </div>
-
-        <div class="cta-inline" data-aos="fade-up" data-aos-delay="400">
-          <div class="cta-inline__bg"></div>
-          <div class="cta-inline__content">
-            <div>
-              <h3 class="cta-inline__title">Thưởng thức trọn vẹn</h3>
-              <p class="cta-inline__text">Khám phá danh sách các nhà hàng và quán ăn truyền thống tốt nhất được người dân địa phương gợi ý.</p>
-            </div>
-            <div class="cta-inline__actions">
-              <a href="#" class="btn btn--primary">Xem danh sách quán ngon</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ECONOMY SECTION -->
-    <section id="kinh-te" class="section section--soft">
-      <div class="container">
-        <div class="section-head" data-aos="fade-up">
-          <h2 class="section-head__title">Động lực kinh tế</h2>
-          <p class="section-head__subtitle">Đồng Nai là một trong những trung tâm công nghiệp lớn mạnh nhất cả nước, dẫn đầu về thu hút đầu tư nước ngoài FDI.</p>
-        </div>
-
-        <div class="economy-grid">
-          <!-- Stats Details -->
-          <div class="econ-card" data-aos="fade-right" data-aos-delay="100">
-            <div class="econ-card__icon">🏭</div>
-            <h3 class="econ-card__title">Công nghiệp trọng điểm</h3>
-            <p class="econ-card__text">Hàng loạt KCN quy mô lớn như Amata, Biên Hòa 2, Nhơn Trạch cung cấp hạ tầng đồng bộ cho các tập đoàn toàn cầu.</p>
-            <div class="mini-progress">
-              <div class="mini-progress__bar" style="--pct: 85%;"></div>
-              <div class="mini-progress__label">Tỷ lệ lấp đầy KCN: 85%</div>
-            </div>
-          </div>
-
-          <!-- The Meter Chart -->
-          <div class="econ-meter" style="grid-column: span 2;" data-aos="fade-left" data-aos-delay="200">
-            <div class="meter-head">
-              <div class="meter-title">Tăng trưởng FDI (Tỷ USD)</div>
-              <div class="meter-sub">Thống kê 4 năm gần nhất</div>
-            </div>
-            <div class="meter-bars">
-              <div class="meter-bar" style="--h: 40%;"><span>2023</span></div>
-              <div class="meter-bar" style="--h: 65%;"><span>2024</span></div>
-              <div class="meter-bar" style="--h: 50%;"><span>2025</span></div>
-              <div class="meter-bar" style="--h: 90%;"><span>2026</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY SECTION -->
-    <section id="thu-vien" class="section">
-      <div class="container">
-        <div class="section-head" data-aos="fade-up">
-          <h2 class="section-head__title">Góc nhìn Đồng Nai</h2>
-          <p class="section-head__subtitle">Chiêm ngưỡng những khoảnh khắc đẹp nhất của phong cảnh, con người và nhịp sống qua lăng kính nhiếp ảnh.</p>
-        </div>
-
-        <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <figure class="shot">
-                <div class="shot__img shot__img--1"></div>
-                <figcaption class="shot__cap">Bình minh trên hồ Trị An</figcaption>
-              </figure>
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-              <figure class="shot">
-                <div class="shot__img shot__img--2"></div>
-                <figcaption class="shot__cap">Nhịp sống sôi động tại TP. Biên Hòa</figcaption>
-              </figure>
-            </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-              <figure class="shot">
-                <div class="shot__img shot__img--3"></div>
-                <figcaption class="shot__cap">Hoàng hôn trên cánh đồng</figcaption>
-              </figure>
-            </div>
-            <!-- Slide 4 -->
-            <div class="swiper-slide">
-              <figure class="shot">
-                <div class="shot__img shot__img--4"></div>
-                <figcaption class="shot__cap">Cầu Hóa An về đêm</figcaption>
-              </figure>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <div class="footer__brand-mark">🌟</div>
-        <div>
-          <div class="footer__brand-title">Đồng Nai</div>
-          <div class="footer__brand-sub">Tinh hoa hội tụ, phát triển vươn xa</div>
-        </div>
-      </div>
-      
-      <div class="footer__cols">
-        <div>
-          <div class="footer__col-title">Khám Phá</div>
-          <a href="#" class="footer__link">Địa điểm du lịch</a>
-          <a href="#" class="footer__link">Lịch trình gợi ý</a>
-          <a href="#" class="footer__link">Bản đồ điện tử</a>
-        </div>
-        <div>
-          <div class="footer__col-title">Kinh Tế & Đầu Tư</div>
-          <a href="#" class="footer__link">Khu công nghiệp</a>
-          <a href="#" class="footer__link">Chính sách đầu tư</a>
-          <a href="#" class="footer__link">Tin tức dự án</a>
-        </div>
-        <div>
-          <div class="footer__col-title">Kết Nối</div>
-          <a href="#" class="footer__link">Liên hệ hỗ trợ</a>
-          <a href="#" class="footer__link">Đóng góp ý kiến</a>
-          <span class="footer__muted">Hotline: 1900 xxxx</span>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <span>© 2026 Đồng Nai Landing</span>
-        <span class="footer__dot">•</span>
-        <span>Thiết kế mượt mà với GSAP & AOS</span>
-      </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2026 Aurora Valley. All rights reserved.</p>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  
-  <!-- Add ScrollTrigger plugin for more advanced GSAP effects if needed later -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-  <script>
-    // 1. Handle Loading Overlay with GSAP
-    window.addEventListener("load", () => {
-      const loader = document.getElementById("loading");
-      
-      // Animate out the loader
-      gsap.to(loader, {
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.inOut",
-        onComplete: () => {
-          loader.classList.add("loading--done");
-          
-          // Animate hero layers
-          gsap.from(".parallax-layer--bg", { scale: 1.1, opacity: 0, duration: 1.5, ease: "power3.out" });
-          gsap.from(".parallax-layer--mid", { scale: 1.05, opacity: 0, duration: 1.5, delay: 0.2, ease: "power3.out" });
-          
-          // Animate floating decors
-          gsap.from(".decor", { 
-            y: 30, opacity: 0, duration: 1, 
-            stagger: 0.1, delay: 0.5, ease: "back.out(1.7)" 
-          });
-        }
-      });
-    });
-
-    // 2. Initialize AOS (Animate On Scroll)
-    AOS.init({
-      once: true, // whether animation should happen only once - while scrolling down
-      offset: 50, // offset (in px) from the original trigger point
-      duration: 800, // values from 0 to 3000, with step 50ms
-      easing: 'ease-out-cubic',
-    });
-
-    // 3. Initialize Swiper Gallery
-    new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      autoplay: { 
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-      pagination: { 
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      breakpoints: {
-        640: { slidesPerView: 2, spaceBetween: 20 },
-        1024: { slidesPerView: 3, spaceBetween: 30 },
-      }
-    });
-
-    // 4. Parallax effect on mouse move for the Hero section
-    const heroSection = document.querySelector('.hero');
-    const midLayer = document.querySelector('.parallax-layer--mid');
-    const fgLayer = document.querySelector('.parallax-layer--fg');
-    
-    if (heroSection && midLayer && fgLayer) {
-      heroSection.addEventListener('mousemove', (e) => {
-        const x = (window.innerWidth / 2 - e.pageX) / 50;
-        const y = (window.innerHeight / 2 - e.pageY) / 50;
-        
-        gsap.to(midLayer, { x: x, y: y, duration: 1, ease: "power1.out" });
-        gsap.to(fgLayer, { x: x * 2, y: y * 2, duration: 1, ease: "power1.out" });
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
