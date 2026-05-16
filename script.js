@@ -20,16 +20,16 @@ tlHero.to(".hero-title", {
   ease: "power3.out",
   delay: 0.5
 })
-.to(".hero-subtitle", {
-  y: 0,
-  opacity: 1,
-  duration: 1,
-  ease: "power3.out"
-}, "-=0.8")
-.to(".scroll-indicator", {
-  opacity: 1,
-  duration: 1
-}, "-=0.5");
+  .to(".hero-subtitle", {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out"
+  }, "-=0.8")
+  .to(".scroll-indicator", {
+    opacity: 1,
+    duration: 1
+  }, "-=0.5");
 
 // Parallax Hero Elements
 gsap.to(".floating-elements", {
