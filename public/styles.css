@@ -190,10 +190,7 @@ body:hover .cursor { opacity: 1; }
 }
 
 .hero-sky {
-  background-image: url('/images/sang.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+    background: radial-gradient(ellipse at 50% 0%, #1a3055 0%, #0a1520 40%, #050a05 100%);
   z-index: 0;
 }
 
