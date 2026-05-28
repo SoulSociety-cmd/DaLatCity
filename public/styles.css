@@ -811,7 +811,10 @@ body:hover .cursor { opacity: 1; }
 }
 
 .pine-visual {
-  background: linear-gradient(135deg, #1a3020 0%, #2d5035 40%, #0d1f10 100%);
+  background-image: url('/images/rungthong.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
 }
@@ -827,29 +830,26 @@ body:hover .cursor { opacity: 1; }
 }
 
 .flower-visual {
-  background: linear-gradient(135deg, #f0d8e0 0%, #e8c0d0 50%, #d4a0b8 100%);
+  background-image: url('/images/vuonhoa.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 60px;
 }
 
-.flower-visual::before { content: '🌸🌷🌺🌼🌸🌷🌺🌼'; display: block; text-align: center; }
+.flower-visual::before { display: block; text-align: center; }
 
 .city-visual {
-  background: linear-gradient(180deg, #1a1f2e 0%, #2d3545 50%, #1a2e1a 100%);
+   background-image: url('/images/thanhpho.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  font-size: 45px;
-  padding-bottom: 20px;
 }
 
-.city-visual::before { content: '🏔️🏡🌉🌃✨'; display: block; text-align: center; }
+.city-visual::before { display: block; text-align: center; }
 
 .vis-card-overlay {
   position: absolute;
