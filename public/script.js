@@ -118,9 +118,9 @@ const destinations = [
 const foods = [
   {
     name: 'Bánh Căn',
-    emoji: '🫓',
+    image: '/images/banhcan.jpg',
     bg: '#f5e8d0',
-    desc: 'Bánh căn nóng hổi với trứng gà tươi, ăn kèm nước mắm cà rốt chua ngọt. Đặc sản không thể bỏ qua của Đà Lạt.',
+    desc: 'Bánh căn Đà Lạt là món bánh nhỏ nướng từ bột gạo, giòn nhẹ, thường ăn cùng trứng, xíu mại và nước chấm nóng, rất hợp với khí trời lạnh của Đà Lạt.',
     price: '15.000 – 30.000đ',
     rating: '⭐⭐⭐⭐⭐',
   },
@@ -514,9 +514,13 @@ function initFoodSection() {
   track.innerHTML = foods.map(f => `
     <div class="food-card">
       <div class="food-visual" style="background:${f.bg}">
-        <span>${f.emoji}</span>
-        <div class="food-warm-overlay"></div>
-      </div>
+        ${
+          f.image
+            ? `<img src="${f.image}" alt="${f.name}" class="food-image">`
+            : `<span>${f.emoji}</span>`
+        }
+  <div class="food-warm-overlay"></div>
+</div>
       <div class="food-info">
         <div class="food-name">${f.name}</div>
         <div class="food-desc">${f.desc}</div>
