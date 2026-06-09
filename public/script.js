@@ -126,7 +126,7 @@ const foods = [
   },
   {
     name: 'Lẩu Gà Lá É',
-    emoji: '🍲',
+    image: '/images/lauga.jpg',
     bg: '#ffe8d0',
     desc: 'Nồi lẩu gà thơm phức với lá é đặc trưng của Đà Lạt. Ấm bụng, ấm lòng trong những buổi chiều se lạnh.',
     price: '80.000 – 150.000đ',
@@ -134,7 +134,7 @@ const foods = [
   },
   {
     name: 'Bánh Tráng Nướng',
-    emoji: '🥙',
+    image: '/images/banhtrangnuong.jpg',
     bg: '#f5f0e0',
     desc: 'Bánh tráng nướng vàng giòn với trứng, hành lá, khô bò và tương ớt. Pizza phiên bản Việt Nam của Đà Lạt!',
     price: '15.000 – 35.000đ',
@@ -142,7 +142,7 @@ const foods = [
   },
   {
     name: 'Kem Bơ',
-    emoji: '🍦',
+    image: '/images/kembo.jpg',
     bg: '#f0f0d0',
     desc: 'Kem bơ béo ngậy từ bơ Đà Lạt tươi nhất. Vị bơ đặc trưng, ngọt dịu, tan chảy trong từng muỗng kem.',
     price: '20.000 – 40.000đ',
@@ -150,7 +150,7 @@ const foods = [
   },
   {
     name: 'Dâu Tây Đà Lạt',
-    emoji: '🍓',
+    image: '/images/dautay.jpg',
     bg: '#f5e0e0',
     desc: 'Dâu tây Đà Lạt nổi tiếng ngọt, thơm, mọng nước. Ăn tươi, làm sinh tố hay chấm socola đều tuyệt vời.',
     price: '30.000 – 60.000đ/hộp',
@@ -158,7 +158,7 @@ const foods = [
   },
   {
     name: 'Sữa Đậu Nành Nóng',
-    emoji: '🥛',
+    image: '/images/suadaunanh.jpg',
     bg: '#f5f5e0',
     desc: 'Ly sữa đậu nành nóng thơm phức buổi sáng sớm, ăn kèm bánh mì giòn. Khởi đầu hoàn hảo cho ngày Đà Lạt.',
     price: '8.000 – 15.000đ',
