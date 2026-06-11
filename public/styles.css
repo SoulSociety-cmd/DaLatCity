@@ -1021,9 +1021,8 @@ body:hover .cursor { opacity: 1; }
 
 .destinations-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto auto;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px 60px;
@@ -1055,10 +1054,6 @@ body:hover .cursor { opacity: 1; }
 .dest-card:hover::before {
   opacity: 1;
 }
-
-.dest-card:nth-child(1) { grid-column: 1 / 3; }
-.dest-card:nth-child(4) { grid-column: 1 / 3; }
-.dest-card:nth-child(5) { grid-column: 3 / 6; }
 
 .dest-card:hover {
   transform: perspective(1000px) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) scale(1.02);
