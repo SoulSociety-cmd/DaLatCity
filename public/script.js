@@ -14,8 +14,9 @@ const destinations = [
     name: 'Hồ Xuân Hương',
     tag: 'Hồ Nước • Lãng Mạn',
     emoji: '🏞️',
-    bg: 'linear-gradient(135deg, #2a5a7a 0%, #3a7a9a 50%, #1a3a5a 100%)',
-    desc: 'Hồ nước nhân tạo nằm giữa lòng thành phố, được bao quanh bởi những hàng thông xanh và vườn hoa rực rỡ. Lý tưởng cho những buổi sáng sớm dạo bộ.',
+    image: '/images/hoxuanhuong.jpg',
+    category: 'chill',
+    desc: 'Hồ nước nhân tạo nằm giữa lòng thành phố...',
     weather: '🌤 Mát mẻ quanh năm',
     bestTime: 'Sáng sớm 5–8h',
     cost: '~50.000đ',
@@ -24,95 +25,60 @@ const destinations = [
   },
   {
     id: 2,
-    name: 'Thung Lũng Tình Yêu',
-    tag: 'Thung Lũng • Cặp Đôi',
-    emoji: '💕',
-    bg: 'linear-gradient(135deg, #5a3a6a 0%, #8a5a9a 50%, #3a2a5a 100%)',
-    desc: 'Thung lũng lãng mạn với những đồi hoa đầy màu sắc, hồ nước tĩnh lặng và không khí tình yêu bao phủ. Thiên đường cho các cặp đôi.',
-    weather: '🌸 Hoa nở quanh năm',
-    bestTime: 'Chiều 14–17h',
-    cost: '~100.000đ',
-    duration: '3–4 giờ',
-    nearby: 'Đồi chè Cầu Đất, Vườn dâu',
+    name: 'Quảng Trường Lâm Viên',
+    tag: 'Check-in Nổi Tiếng',
+    emoji: '🌻',
+    image: '/images/quangtruonglamvien.jpg',
+    category: 'city',
+    desc: 'Biểu tượng hiện đại của Đà Lạt với nụ hoa Atiso và bông hoa Dã Quỳ khổng lồ.',
+    weather: '🌤 Thoáng mát',
+    bestTime: '16–18h',
+    cost: 'Miễn phí',
+    duration: '1 giờ',
+    nearby: 'Hồ Xuân Hương',
   },
   {
     id: 3,
-    name: 'Đồi Chè Cầu Đất',
-    tag: 'Đồi Chè • Thiên Nhiên',
-    emoji: '🌿',
-    bg: 'linear-gradient(135deg, #2a4a2a 0%, #4a7a3a 50%, #1a3a1a 100%)',
-    desc: 'Những đồi chè xanh mướt trải dài như tấm thảm khổng lồ dưới bầu trời xanh thẳm. Không khí trong lành, cảnh vật hùng vĩ tuyệt đẹp.',
-    weather: '☁️ Sương mù ban sáng',
-    bestTime: 'Sáng 6–9h',
-    cost: '~80.000đ',
-    duration: '2–3 giờ',
-    nearby: 'Trang trại dâu, Nhà máy chè',
+    name: 'Đỉnh LangBiang',
+    tag: 'View Toàn Thành Phố',
+    emoji: '⛰️',
+    image: '/images/langbiang.jpg',
+    category: 'adventure',
+    desc: 'Ngọn núi nổi tiếng nhất Đà Lạt với tầm nhìn bao quát cao nguyên Lâm Viên.',
+    weather: '☁️ Se lạnh',
+    bestTime: '6–10h sáng',
+    cost: '~100.000đ',
+    duration: '3–4 giờ',
+    nearby: 'Làng Cù Lần',
   },
   {
     id: 4,
-    name: 'LangBiang',
-    tag: 'Đỉnh Núi • Phiêu Lưu',
-    emoji: '⛰️',
-    bg: 'linear-gradient(135deg, #3a3a5a 0%, #5a5a8a 50%, #1a1a3a 100%)',
-    desc: 'Đỉnh núi cao 2.167m với truyền thuyết tình yêu bất tử. Từ đỉnh núi, bạn có thể nhìn thấy toàn cảnh Đà Lạt trong biển mây trắng.',
-    weather: '⛅ Mây bao phủ thường xuyên',
-    bestTime: 'Sáng sớm và chiều tối',
-    cost: '~150.000đ',
-    duration: '4–5 giờ',
-    nearby: 'Làng Cù Lần, Vườn quốc gia',
+    name: 'Hồ Tuyền Lâm',
+    tag: 'Thiên Nhiên Yên Bình',
+    emoji: '🌅',
+    image: '/images/tuyenlam.jpg',
+    category: 'nature',
+    desc: 'Hồ nước lớn nhất Đà Lạt, nổi tiếng với khung cảnh thơ mộng và rừng thông bao quanh.',
+    weather: '🌲 Trong lành',
+    bestTime: 'Sáng sớm hoặc chiều tà',
+    cost: 'Miễn phí',
+    duration: '2–3 giờ',
+    nearby: 'Thiền Viện Trúc Lâm',
   },
   {
     id: 5,
-    name: 'Ga Đà Lạt',
-    tag: 'Lịch Sử • Kiến Trúc',
-    emoji: '🚂',
-    bg: 'linear-gradient(135deg, #5a4a2a 0%, #8a7a4a 50%, #3a3a1a 100%)',
-    desc: 'Nhà ga cổ kính mang kiến trúc Pháp độc đáo, được xây dựng năm 1938. Chuyến tàu leo núi cổ xưa đưa bạn qua những cảnh đẹp hoang sơ.',
-    weather: '🌤 Đẹp nhất buổi sáng',
-    bestTime: 'Buổi sáng 8–11h',
-    cost: '~80.000đ',
-    duration: '1–2 giờ',
-    nearby: 'Chợ Đà Lạt, Dinh Bảo Đại',
-  },
-  {
-    id: 6,
-    name: 'Chợ Đà Lạt',
-    tag: 'Ẩm Thực • Địa Phương',
-    emoji: '🛒',
-    bg: 'linear-gradient(135deg, #6a3a2a 0%, #9a6a4a 50%, #3a2a1a 100%)',
-    desc: 'Trái tim ẩm thực của Đà Lạt. Những gian hàng đầy màu sắc bán rau củ, trái cây, hoa tươi và các đặc sản nổi tiếng của vùng cao nguyên.',
-    weather: '🌆 Đẹp nhất buổi chiều tối',
-    bestTime: 'Chiều tối 17–21h',
-    cost: '~200.000đ',
-    duration: '2–3 giờ',
-    nearby: 'Hồ Xuân Hương, Đường Hoa',
-  },
-  {
-    id: 7,
-    name: 'Thiền Viện Trúc Lâm',
-    tag: 'Tâm Linh • Bình Yên',
-    emoji: '🛕',
-    bg: 'linear-gradient(135deg, #3a5a3a 0%, #5a8a5a 50%, #1a3a1a 100%)',
-    desc: 'Thiền viện lớn nằm bên hồ Tuyền Lâm xanh biếc. Không gian yên tĩnh, thanh tịnh giữa rừng thông, lý tưởng để tìm bình yên cho tâm hồn.',
-    weather: '🌳 Mát mẻ cả ngày',
-    bestTime: 'Sáng sớm 7–10h',
+    name: 'Đồi Chè Cầu Đất',
+    tag: 'Săn Mây • Check-in',
+    emoji: '🍃',
+    image: '/images/caudat.jpg',
+    category: 'nature',
+    desc: 'Địa điểm săn mây nổi tiếng với những đồi chè xanh bạt ngàn.',
+    weather: '🌥 Se lạnh',
+    bestTime: '5–7h sáng',
     cost: '~30.000đ',
     duration: '2–3 giờ',
-    nearby: 'Hồ Tuyền Lâm, Cáp treo',
-  },
-  {
-    id: 8,
-    name: 'Fresh Garden Đà Lạt',
-    tag: 'Nông Trại • Hái Lượm',
-    emoji: '🍓',
-    bg: 'linear-gradient(135deg, #6a2a2a 0%, #9a4a4a 50%, #4a1a1a 100%)',
-    desc: 'Vườn dâu tây rộng lớn nơi bạn tự tay hái những quả dâu tươi ngon ngọt nhất. Trải nghiệm văn hóa nông trại đặc sắc của Đà Lạt.',
-    weather: '☀️ Đẹp nhất trời nắng',
-    bestTime: 'Buổi sáng 8–12h',
-    cost: '~120.000đ',
-    duration: '2–3 giờ',
-    nearby: 'Vườn rau Langbiang, Cầu Đất',
-  },
+    nearby: 'Điện gió Cầu Đất',
+  }
 ];
 
 const foods = [
@@ -256,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMouseLight();
   initMagneticButtons();
   initDestinations();
+  initDestinationFilters();
   initFoodSection();
   initCafes();
   initPlanner();
@@ -391,45 +358,126 @@ function initMagneticButtons() {
 // DESTINATIONS
 // ===========================
 
-function initDestinations() {
-  const grid = document.getElementById('destinationsGrid');
-  grid.innerHTML = destinations.map(d => `
-    <div class="dest-card reveal" data-id="${d.id}" style="background:${d.bg}">
-      <div class="dest-card-bg">${d.emoji}</div>
-      <div class="dest-card-overlay"></div>
+function initDestinations(filter = 'all') {
+
+  const grid =
+    document.getElementById(
+      'destinationsGrid'
+    );
+
+  const filtered =
+    filter === 'all'
+      ? destinations
+      : destinations.filter(
+          item =>
+            item.category === filter
+        );
+
+  grid.innerHTML = filtered.map(d => `
+
+    <div class="dest-card reveal" data-id="${d.id}">
+
+${d.image
+  ? `<img src="${d.image}" class="dest-image" alt="${d.name}">`
+  : `
+    <div 
+      class="dest-card-bg"
+      style="
+        background: linear-gradient(180deg, #6ab0d8 0%, #2d5040 100%);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:80px;
+      "
+    >
+      ${d.emoji}
+    </div>`
+}
+
+      <div class="dest-overlay"></div>
+
       <div class="dest-card-content">
-        <div class="dest-card-tag">${d.tag}</div>
-        <div class="dest-card-name">${d.name}</div>
-        <div class="dest-card-desc">${d.desc}</div>
-        <div class="dest-card-btn">Khám phá →</div>
+
+        <div class="dest-card-tag">
+          ${d.tag}
+        </div>
+
+        <div class="dest-card-name">
+          ${d.name}
+        </div>
+
+        <div class="dest-info">
+          <span>${d.bestTime}</span>
+          <span>${d.cost}</span>
+        </div>
+
+        <div class="dest-card-btn">
+          Khám phá →
+        </div>
+
       </div>
     </div>
+
   `).join('');
 
-  // 3D tilt effect
-  grid.querySelectorAll('.dest-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const rx = ((e.clientY - cy) / rect.height) * -8;
-      const ry = ((e.clientX - cx) / rect.width) * 8;
-      card.style.setProperty('--rx', rx + 'deg');
-      card.style.setProperty('--ry', ry + 'deg');
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.setProperty('--rx', '0deg');
-      card.style.setProperty('--ry', '0deg');
-    });
-    card.addEventListener('click', () => {
-      const id = parseInt(card.dataset.id);
-      const dest = destinations.find(d => d.id === id);
-      openModal(dest);
-    });
-  });
+  document
+    .querySelectorAll('.dest-card')
+    .forEach(card => {
 
-  // Re-init cursor listeners
-  setTimeout(() => initCursor(), 100);
+      card.addEventListener(
+        'mousemove',
+        (e) => {
+
+          const rect =
+            card.getBoundingClientRect();
+
+          const cx =
+            rect.left +
+            rect.width / 2;
+
+          const cy =
+            rect.top +
+            rect.height / 2;
+
+          const rx =
+            ((e.clientY - cy) /
+              rect.height) * -8;
+
+          const ry =
+            ((e.clientX - cx) /
+              rect.width) * 8;
+
+          card.style.transform =
+            `rotateX(${rx}deg)
+             rotateY(${ry}deg)
+             translateY(-10px)`;
+        }
+      );
+
+      card.addEventListener(
+        'mouseleave',
+        () => {
+          card.style.transform =
+            'rotateX(0) rotateY(0)';
+        }
+      );
+
+      card.addEventListener(
+        'click',
+        () => {
+
+          const id =
+            parseInt(card.dataset.id);
+
+          const dest =
+            destinations.find(
+              d => d.id === id
+            );
+
+          openModal(dest);
+        }
+      );
+    });
 }
 
 // ===========================
@@ -455,35 +503,80 @@ function openModal(dest) {
   const visual = document.getElementById('modalVisual');
   const content = document.getElementById('modalContent');
 
-  visual.style.background = dest.bg;
-  visual.innerHTML = dest.emoji;
+  // Hiển thị ảnh thật
+  visual.innerHTML = `
+    <img 
+      src="${dest.image}" 
+      alt="${dest.name}"
+      style="
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        border-radius:20px;
+      "
+    >
+  `;
 
   content.innerHTML = `
-    <div class="section-badge" style="color:var(--gold); border-color:rgba(200,160,85,0.3)">${dest.tag}</div>
+    <div class="section-badge" style="color:var(--gold); border-color:rgba(200,160,85,0.3)">
+      ${dest.tag}
+    </div>
+
     <h2>${dest.name}</h2>
-    <p class="modal-desc">${dest.desc}</p>
+
+    <p class="modal-desc">
+      ${dest.desc}
+    </p>
+
     <div class="modal-detail-grid">
+
       <div class="modal-detail-item">
-        <div class="modal-detail-label">Thời Tiết</div>
-        <div class="modal-detail-val">${dest.weather}</div>
+        <div class="modal-detail-label">
+          Thời Tiết
+        </div>
+        <div class="modal-detail-val">
+          ${dest.weather}
+        </div>
       </div>
+
       <div class="modal-detail-item">
-        <div class="modal-detail-label">Thời Gian Tốt Nhất</div>
-        <div class="modal-detail-val">${dest.bestTime}</div>
+        <div class="modal-detail-label">
+          Thời Gian Tốt Nhất
+        </div>
+        <div class="modal-detail-val">
+          ${dest.bestTime}
+        </div>
       </div>
+
       <div class="modal-detail-item">
-        <div class="modal-detail-label">Chi Phí Ước Tính</div>
-        <div class="modal-detail-val">${dest.cost}</div>
+        <div class="modal-detail-label">
+          Chi Phí Ước Tính
+        </div>
+        <div class="modal-detail-val">
+          ${dest.cost}
+        </div>
       </div>
+
       <div class="modal-detail-item">
-        <div class="modal-detail-label">Thời Gian Tham Quan</div>
-        <div class="modal-detail-val">${dest.duration}</div>
+        <div class="modal-detail-label">
+          Thời Gian Tham Quan
+        </div>
+        <div class="modal-detail-val">
+          ${dest.duration}
+        </div>
       </div>
+
     </div>
+
     <div class="modal-detail-item" style="margin-bottom:20px">
-      <div class="modal-detail-label">Gần Đây</div>
-      <div class="modal-detail-val">${dest.nearby}</div>
+      <div class="modal-detail-label">
+        Gần Đây
+      </div>
+      <div class="modal-detail-val">
+        ${dest.nearby}
+      </div>
     </div>
+
     <button class="modal-save-btn" onclick="addToPlanner('${dest.name}')">
       ✨ Thêm vào hành trình
     </button>
@@ -970,17 +1063,71 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 // Nav CTA
-document.querySelector('.nav-cta').addEventListener('click', () => {
-  document.getElementById('planner').scrollIntoView({ behavior: 'smooth' });
-});
+const navBtn = document.querySelector('.nav-cta');
+if (navBtn) {
+  navBtn.addEventListener('click', () => {
+    document.getElementById('planner')
+      .scrollIntoView({
+        behavior: 'smooth'
+      });
+  });
+}
 
 // Hero CTAs
-document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const target = btn.textContent.includes('Kế Hoạch') || btn.textContent.includes('kế hoạch')
-      ? '#planner' : '#destinations';
-    document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+const heroBtns =
+  document.querySelectorAll(
+    '.btn-primary, .btn-secondary'
+  );
+
+if (heroBtns.length) {
+  heroBtns.forEach(btn => {
+    btn.addEventListener(
+      'click',
+      () => {
+
+        const target =
+          btn.textContent.includes(
+            'Kế Hoạch'
+          )
+          ? '#planner'
+          : '#destinations';
+
+        document
+          .querySelector(target)
+          ?.scrollIntoView({
+            behavior: 'smooth'
+          });
+      }
+    );
   });
-});
+}
 
 console.log('🌿 Đà Lạt Cinematic Experience loaded successfully');
+
+function initDestinationFilters() {
+
+  const buttons =
+    document.querySelectorAll(
+      '.filter-btn'
+    );
+
+  buttons.forEach(btn => {
+
+    btn.addEventListener(
+      'click',
+      () => {
+
+        buttons.forEach(b =>
+          b.classList.remove('active')
+        );
+
+        btn.classList.add('active');
+
+        const filter =
+          btn.dataset.filter;
+
+        initDestinations(filter);
+      }
+    );
+  });
+}
