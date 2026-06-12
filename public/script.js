@@ -51,20 +51,7 @@ const destinations = [
     duration: '3–4 giờ',
     nearby: 'Làng Cù Lần',
   },
-  {
-    id: 4,
-    name: 'Hồ Tuyền Lâm',
-    tag: 'Thiên Nhiên Yên Bình',
-    emoji: '🌅',
-    image: '/images/tuyenlam.jpg',
-    category: 'nature',
-    desc: 'Hồ nước lớn nhất Đà Lạt, nổi tiếng với khung cảnh thơ mộng và rừng thông bao quanh.',
-    weather: '🌲 Trong lành',
-    bestTime: 'Sáng sớm hoặc chiều tà',
-    cost: 'Miễn phí',
-    duration: '2–3 giờ',
-    nearby: 'Thiền Viện Trúc Lâm',
-  },
+  
   {
     id: 5,
     name: 'Đồi Chè Cầu Đất',
