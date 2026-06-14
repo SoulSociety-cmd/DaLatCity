@@ -123,7 +123,7 @@ const cafes = [
   {
     name: 'The Married Beans',
     vibe: 'Rừng Thông • Cổ Điển',
-    emoji: '☕',
+    image: '/images/themarriedbeans.jpg',
     bg: 'linear-gradient(135deg, #3a2a1a 0%, #6a4a2a 100%)',
     desc: 'Không gian cổ điển giữa rừng thông xanh mát. Mỗi góc là một khoảnh khắc đáng để chụp hình và lưu giữ.',
   },
@@ -633,16 +633,21 @@ function initFoodSection() {
 
 function initCafes() {
   const grid = document.getElementById('cafeGrid');
+
   grid.innerHTML = cafes.map(c => `
     <div class="cafe-card reveal">
-      <div class="cafe-visual" style="background:${c.bg}">
-        <span>${c.emoji}</span>
+      <div class="cafe-visual">
+        <img src="${c.image}" alt="${c.name}">
+
         <div class="cafe-steam">
           ${[...Array(5)].map((_, i) => `
-            <div class="steam-particle" style="left:${40+i*8}%; animation-delay:${i*0.5}s"></div>
+            <div class="steam-particle"
+                 style="left:${40+i*8}%;animation-delay:${i*0.5}s">
+            </div>
           `).join('')}
         </div>
       </div>
+
       <div class="cafe-info">
         <div class="cafe-name">${c.name}</div>
         <div class="cafe-vibe">${c.vibe}</div>
