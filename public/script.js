@@ -122,24 +122,24 @@ const foods = [
 const cafes = [
   {
     name: 'The Married Beans',
-    vibe: 'Rừng Thông • Cổ Điển',
+    vibe: 'Bình Yên • Cổ Điển',
     image: '/images/themarriedbeans.jpg',
     bg: 'linear-gradient(135deg, #3a2a1a 0%, #6a4a2a 100%)',
     desc: 'Không gian cổ điển giữa rừng thông xanh mát. Mỗi góc là một khoảnh khắc đáng để chụp hình và lưu giữ.',
   },
   {
-    name: 'Cà Phê Trên Mây',
+    name: 'Horizon Coffee Đà Lạt',
     vibe: 'Trên Đồi • Toàn Cảnh',
-    emoji: '☁️',
+    image: '/images/horizoncoffe.jpg',
     bg: 'linear-gradient(135deg, #1a2a3a 0%, #2a4a6a 100%)',
     desc: 'Ngồi giữa mây trắng bồng bềnh, nhìn xuống toàn cảnh Đà Lạt. Trải nghiệm cà phê độc nhất vô nhị.',
   },
   {
-    name: 'Nhà Của Gió',
-    vibe: 'Nhà Gỗ • Ấm Cúng',
-    emoji: '🏡',
+    name: 'Trạm ký ức',
+    vibe: 'Lãng Mạng • Thơ Mộng',
+    image: '/images/tramkyuc.jpg',
     bg: 'linear-gradient(135deg, #4a3a2a 0%, #7a5a3a 100%)',
-    desc: 'Căn nhà gỗ ấm cúng với tiếng nhạc acoustic nhẹ nhàng, ánh đèn vàng ấm và vị cà phê đặc biệt.',
+    desc: 'Trạm Ký Ức là góc châu Âu cổ kính giữa đồi thông Đà Lạt, nơi những mái ngói đỏ, vườn hoa và ánh hoàng hôn tạo nên một miền ký ức đầy thơ mộng.',
   },
 ];
 
