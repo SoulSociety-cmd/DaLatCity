@@ -171,18 +171,18 @@ const stories = [
 ];
 
 const galleryItems = [
-  { emoji: '🌄', bg: 'linear-gradient(135deg, #ff8c42 0%, #ff6b35 50%, #c04a20 100%)', h: 200 },
-  { emoji: '🌲', bg: 'linear-gradient(135deg, #1a3020 0%, #2d5035 50%, #0d1f10 100%)', h: 280 },
-  { emoji: '🌸', bg: 'linear-gradient(135deg, #f0d8e0 0%, #d4a0b8 100%)', h: 180 },
-  { emoji: '☁️', bg: 'linear-gradient(135deg, #8ab8d4 0%, #5a8aaa 100%)', h: 240 },
-  { emoji: '⛰️', bg: 'linear-gradient(135deg, #3a4a6a 0%, #5a6a8a 100%)', h: 200 },
-  { emoji: '🏡', bg: 'linear-gradient(135deg, #5a4a2a 0%, #8a6a4a 100%)', h: 260 },
-  { emoji: '🌃', bg: 'linear-gradient(135deg, #0a0f1a 0%, #1a2a3a 100%)', h: 300 },
-  { emoji: '🌺', bg: 'linear-gradient(135deg, #c04080 0%, #e06090 100%)', h: 220 },
-  { emoji: '☕', bg: 'linear-gradient(135deg, #3a2010 0%, #6a4020 100%)', h: 180 },
-  { emoji: '🍓', bg: 'linear-gradient(135deg, #c02020 0%, #e04040 100%)', h: 240 },
-  { emoji: '🌿', bg: 'linear-gradient(135deg, #2a4a2a 0%, #4a6a4a 100%)', h: 200 },
-  { emoji: '🌠', bg: 'linear-gradient(135deg, #050810 0%, #0a1020 100%)', h: 280 },
+  { image: 'images/dalat1.jpg', h: 200 },
+  { image: 'images/dalat2.jpg', h: 280 },
+  { image: 'images/dalat3.jpg', h: 180 },
+  { image: 'images/dalat4.jpg', h: 240 },
+  { image: 'images/dalat5.jpg', h: 200 },
+  { image: 'images/dalat6.jpg', h: 260 },
+  { image: 'images/dalat7.jpg', h: 300 },
+  { image: 'images/dalat8.jpg', h: 220 },
+  { image: 'images/dalat9.jpg', h: 180 },
+  { image: 'images/dalat10.jpg', h: 240 },
+  { image: 'images/dalat11.jpg', h: 200 },
+  { image: 'images/dalat12.jpg', h: 280 },
 ];
 
 const placeItems = [
