@@ -828,10 +828,11 @@ function autoGenerate() {
 
 function initGallery() {
   const gallery = document.getElementById('masonryGallery');
+
   gallery.innerHTML = galleryItems.map((item, i) => `
-    <div class="gallery-item reveal" style="animation-delay:${i*0.05}s">
-      <div class="gallery-visual" style="background:${item.bg}; height:${item.h}px;">
-        <span>${item.emoji}</span>
+    <div class="gallery-item reveal" style="animation-delay:${i * 0.05}s">
+      <div class="gallery-visual" style="height:${item.h}px;">
+        <img src="${item.image}" alt="Đà Lạt">
         <div class="gallery-overlay">
           <div class="gallery-expand">⊕</div>
         </div>
