@@ -1830,12 +1830,22 @@ body:hover .cursor { opacity: 1; }
 }
 
 .gallery-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 60px;
   position: relative;
-  transition: transform 0.5s;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.gallery-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-visual img {
+  transform: scale(1.08);
 }
 
 .gallery-item:hover .gallery-visual { transform: scale(1.05); }
